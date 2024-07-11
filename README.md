@@ -1,38 +1,55 @@
-<h1 style="text-align:center">Reto Alura de Libreria</h1>
+<img src="reto-foro.png" style="margin-left:6rem" >
+<h1 style="text-align:center; display:none;">Reto Alura</h1>
 <hr>
 <h2 style="text-align:center" >Daniel Jesus Vadillo Cocom</h2>
 <hr>
-<p>Este proyecto se creó con la finalidad de poder dar continudad a mis estudios como desarrollador Java, en este caso se está utilizando el framework de Spring para lograr crear una libreria virtual establecida principalmente en vista de consola.</p>
-<h3>Menu del programa</h3>
-<img src="menu-consola.png">
-<h4>Funcionalidades del programa</h4>
+<p>Como parte de mi proyecto final se creó un foro al estilo ALURA, donde se incluyen la creación de Topico, Usuarios y Perfiles, esto es más un CRUD de foros, con la finalidad de poner en practica los conocimientos de JAVA Spring Boot 3, También se implementó el sistema de Seguridad.</p>
+
+<img src="caracteristica-img.png" style="margin-left:6rem" >
+<h3>Funcionalidades del programa</h3>
 <ul>
     <li>
-    <h5>Buscar libro</h5>
-    <p>Basado en un sistema de consulta a una API, la cual nos devuelve un JSON con la información de varios libros, las cuales van a ser listados para el usuario pueda selecionar alguno con su ID, para guardarlo.</p>
-    <img src="buscar-libro.png">
+    <h5>Listar Topicos</h5>
+    <p>Como parte de un sistema REST el Foro puede listar de manera en paginación los topicos devolviendo un JSON con la información, es importante recalcar que solo se listan los topicos con el Status true</p>
+    <img src="listar-topico.png" style="width:600px">
     </li>
     <li>
-    <h5>Listar Libro Registrado</h5>
-    <p>Una vez almacenado en la base de datos el usuario puede ver un registro de los libros guardados mediante una consulta usando el complemento de JPA en Java y haciendo una consulta a la base de datos PostgreSQL</p>
-    <img src="listar-libros.png" style="width:600px">
+    <h5>Ver Topico Detallado</h5>
+    <p>En caso de que solo se desee ver la información de un Topico se coloca el URL con el ID del topico</p>
+    <img src="detalle-topico.png" style="width:600px">
     </li>
      <li>
-    <h5>Listar Autores Registrados</h5>
-    <p>Cuando un libro se guarda este también guarda el autor un momento después, esto es debido a la relación que se tiene con la base de datos, por lo cual la persona también puede consultar a los autores guardados.</p>
-    <img src="listar-autores.png" style="width:600px">
+    <h5>Eliminar Topico</h5>
+    <p>Al igual que el detallado, se coloca el ID para posteriormente crear una comprobación de que realmente existe y después enviar la solicitud al JPA de un metodo Delete para la base de datos.</p>
+    <img src="delete-topico.png" style="width:600px">
     </li>
      <li>
-    <h5>Listar autores por año vivo</h5>
-    <p>Como parte de crear un filtro de busquedas el usuario puede solicitar buscar a autores de acuerdo al año en que el aun vivian.</p>
-    <img src="listar-por-anio.png" style="width:600px" >
+    <h5>Actualizar Topico</h5>
+    <p>En este caso de actualizar los campos de Titulo, mensaje y el status para el caso que el topico desee ser eliminado de la vista principal pero no eliminado de la base de datos.</p>
+    <img src="actualizacion-topico.png" style="width:600px" >
     </li>
      <li>
-    <h5>Listar Libro por Idioma</h5>
-    <p>Otra forma de filtrar información es con base a los idiomas que puedan contener los libros, para esta caso los libros pueden almacenar 2 idiomas, en caso de que no disponga de uno de ellos en la base de datos el campo se llena con "Sin lenguaje".</p>
-    <img src="listar-por-idioma.png">
+    <h5>Crear Usuario</h5>
+    <p>Como parte de un sistema de seguridad se crea un usuario para poder acceder a la información, este usuario solo puede ser creado por un usuario con un Token inicial. </p>
+    <img src="creacion-usuario.png" style="width:600px"> 
     </li>
-    
+     <li>
+    <h5>Inicio de Sesion</h5>
+    <p>Como forma de verificación se utiliza el Correo electronico para poder acceder como usuario, además que la contraseña que no tiene limitaciones.</p>
+    <img src="inicio-token-JWT.png" style="width:600px">
+    </li>
+    <h3>Base de datos</h3>
+    <img src="Base de datos.png">
+    <img src="base da datos 2.png">
 </ul>
 <hr>
-<h3>La API de los libros la pueden obtener <a href="https://gutendex.com/">aqui</a></h3>
+<img src="tecnologia-usada.png" style="margin-left:6rem">
+<br><br><br>
+<ul>
+<li>Java 17</li>
+<li>Spring Boot 3.3.1</li>
+<li>WampServer 3.2.6</li>
+<li>MySQL 5.7.36 </li>
+<li>Insomnia 9.3.2</li>
+</ul>
+<hr>
